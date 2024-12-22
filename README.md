@@ -1,27 +1,26 @@
-
 # Cyclone DDOS
 
-Cyclone DDOS, Python dilinde yazılmış bir DDoS (Distributed Denial of Service) saldırı aracıdır. Bu araç, hedef sunucularda yük oluşturmak için kullanılabilir. Kullanıcılar, farklı saldırı yöntemlerini (SynFlood, Pyslow, Request) seçebilir ve hedefinize çeşitli ayarlarla saldırabilirsiniz.
+Cyclone DDOS is a DDoS (Distributed Denial of Service) attack tool written in Python. This tool can be used to create load on target servers. Users can select different attack methods (SynFlood, Pyslow, Request) and attack the target with various settings.
 
-> **Uyarı:** Bu script sadece test ve eğitim amaçlı kullanılmalıdır. İzin almadan başkalarının sistemlerine saldırmak yasa dışıdır ve ciddi hukuki sonuçlar doğurabilir.
+> **Warning:** This script is intended for testing and educational purposes only. Attacking others' systems without permission is illegal and can lead to severe legal consequences.
 
-## Özellikler
+## Features
 
-- **Synflood Saldırısı**: Hedefe TCP SYN paketleri göndererek sunucu kaynaklarını tüketir.
-- **Pyslow Saldırısı**: HTTP isteği göndererek sunucuyu yavaşlatır.
-- **Request Saldırısı**: Hedefe yoğun HTTP istekleri gönderir.
-- **Fake IP Kullanımı**: Sahte IP adresi oluşturabilir.
-- **Açık Kaynak**: Proje GitHub üzerinden erişilebilir ve katkıda bulunulabilir.
+- **Synflood Attack**: Sends TCP SYN packets to exhaust server resources.
+- **Pyslow Attack**: Slows down the server by sending HTTP requests.
+- **Request Attack**: Sends massive HTTP requests to the target.
+- **Fake IP Usage**: Generates fake IP addresses.
+- **Open Source**: The project is accessible on GitHub for contributions.
 
-## Gereksinimler
+## Requirements
 
-Cyclone DDOS, aşağıdaki Python kütüphanelerini gerektirir:
+Cyclone DDOS requires the following Python libraries:
 
 - `requests`
 - `colorama`
 - `termcolor`
 
-Kütüphaneler, script çalıştırılmadan önce otomatik olarak yüklenecektir, ancak yükleme işlemi yapılmazsa, şu komutları kullanabilirsiniz:
+These libraries will be installed automatically before running the script. If installation fails, you can install them manually with the following commands:
 
 ### Linux (POSIX):
 ```bash
@@ -33,39 +32,39 @@ sudo pip install colorama termcolor requests
 pip install colorama requests termcolor
 ```
 
-## Kurulum
+## Installation
 
-1. GitHub reposunu klonlayın veya dosyaları indirerek çalıştırmak için uygun bir dizine yerleştirin.
+1. Clone the GitHub repository or download the files and place them in a suitable directory.
 
 ```bash
 git clone https://github.com/mfurkanyazici/cycloneddos.git
 cd cycloneddos
 ```
 
-2. Gerekli bağımlılıkları yükleyin (yukarıdaki gereksinimlere bakın).
+2. Install the required dependencies (see the requirements section above).
 
-3. Scripti çalıştırın.
+3. Run the script.
 
-## Kullanım
+## Usage
 
-Cyclone DDOS, komut satırı üzerinden çalıştırılabilir. İşte temel kullanım örnekleri:
+Cyclone DDOS can be executed via the command line. Here are basic usage examples:
 
-### 1. Pyslow Saldırısı:
+### 1. Pyslow Attack:
 ```bash
 python cyclone.py -d www.example.com -p 80 -T 2000 -Pyslow
 ```
 
-### 2. Request Saldırısı:
+### 2. Request Attack:
 ```bash
 python cyclone.py -d www.domain.com -s 100 -Request
 ```
 
-### 3. Synflood Saldırısı:
+### 3. Synflood Attack:
 ```bash
 python cyclone.py -d www.google.com -Synflood -T 5000 -t 10
 ```
 
-## Komut Satırı Seçenekleri
+## Command Line Options
 
 ```bash
 usage: cyclone.py -d [target] -p [port] -T [number threads]
@@ -87,12 +86,11 @@ options:
 --fakeip         Option to generate fake IP if no spoofed IP is specified
 ```
 
-## Katkıda Bulunma
+## Contribution
 
 Author: mehmetfurkanyazici                                               
-Github: http://github.com/mehmetfurkanyazici/cycloneddos
+GitHub: [Cyclone DDOS Repository](http://github.com/mehmetfurkanyazici/cycloneddos)
 
-## Yazarlar
+## Authors
 
 - **MeFu Security Team**
-
