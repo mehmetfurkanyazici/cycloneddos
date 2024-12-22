@@ -96,6 +96,3 @@ Github: http://github.com/mehmetfurkanyazici/cycloneddos
 
 - **MeFu Security Team**
 
-## Lisans
-
-Cyclone DDOS, MIT lisansı altında lisanslanmıştır.
